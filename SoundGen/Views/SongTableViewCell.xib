@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="100" id="KGk-i7-Jjw" customClass="SongTableViewCell" customModule="SoundGen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pZs-Bi-Ko5">
+                        <rect key="frame" x="10" y="16" width="70" height="67.5"/>
+                        <color key="tintColor" name="goldColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="7We-SK-CuZ"/>
+                            <constraint firstAttribute="height" constant="70" id="iPc-sT-icy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQf-jS-9D6">
+                        <rect key="frame" x="95" y="53" width="270" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" name="lightGray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7b-3P-5Cw">
+                        <rect key="frame" x="95" y="17" width="280" height="36"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S7b-3P-5Cw" firstAttribute="leading" secondItem="pZs-Bi-Ko5" secondAttribute="trailing" constant="15" id="3Ri-Xh-v5M"/>
+                    <constraint firstItem="pZs-Bi-Ko5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="D3s-Ac-j0b"/>
+                    <constraint firstItem="pZs-Bi-Ko5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KBh-zW-UdE"/>
+                    <constraint firstItem="sQf-jS-9D6" firstAttribute="top" secondItem="S7b-3P-5Cw" secondAttribute="bottom" id="KOd-UE-4PY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="sQf-jS-9D6" secondAttribute="trailing" id="Lrh-rn-uRT"/>
+                    <constraint firstAttribute="trailing" secondItem="S7b-3P-5Cw" secondAttribute="trailing" constant="10" id="MlG-tx-roD"/>
+                    <constraint firstItem="sQf-jS-9D6" firstAttribute="leading" secondItem="pZs-Bi-Ko5" secondAttribute="trailing" constant="15" id="WM6-wA-Pa1"/>
+                    <constraint firstItem="S7b-3P-5Cw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="qLf-KD-z9l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+            <connections>
+                <outlet property="artistName" destination="sQf-jS-9D6" id="Pab-2W-dxB"/>
+                <outlet property="coverImage" destination="pZs-Bi-Ko5" id="shR-UC-tIY"/>
+                <outlet property="songName" destination="S7b-3P-5Cw" id="jSz-T5-kKj"/>
+            </connections>
+            <point key="canvasLocation" x="190.57971014492756" y="180.80357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <namedColor name="goldColor">
+            <color red="0.89800000190734863" green="0.83899998664855957" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="lightGray">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
